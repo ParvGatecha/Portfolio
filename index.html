@@ -287,7 +287,7 @@
                 <i data-lucide="search-code" class="w-3.5 h-3.5"></i> rag_query.py
               </button>
               <button onclick="switchTerminalTab('eval')" id="tab-eval" class="px-4 py-2 border-r border-slate-900/80 text-slate-400 hover:text-slate-200 border-b border-b-transparent focus:outline-none transition-all flex items-center gap-1.5">
-                <i data-lucide="gauge" class="w-3.5 h-3.5"></i> eval_agent.sh
+                <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> arbiter_eval.sh
               </button>
             </div>
 
@@ -333,19 +333,19 @@ print(<span class="text-emerald-400">f"Found {len(results)} relevant EHR artifac
 <span class="text-slate-500"># > Latency: 120ms</span>
 <span class="text-slate-500"># > Faithfulness Score: 0.98</span></code></pre>
 
-              <!-- Tab 3: eval_agent.sh -->
-              <pre id="content-eval" class="space-y-1 hidden"><code class="text-slate-400"><span class="text-emerald-400">$</span> python eval_agent.py --model gpt-4o --dataset adversarial_redteam
+              <!-- Tab 3: arbiter_eval.sh -->
+              <pre id="content-eval" class="space-y-1 hidden"><code class="text-slate-400"><span class="text-emerald-400">$</span> arbiter evaluate --project-id 1 --suite-id 2 --target-url /api/gateway/chat/completions
 
-<span class="text-slate-300">[*] Running RLHF & SFT Evaluation Pipeline...</span>
-[+] Loading Red-Teaming workflows
-[+] Loading 1,200 adversarial test scenarios
-
-<span class="text-blue-400">=================== EVAL SUMMARY ===================</span>
-<span class="text-emerald-400">Hallucination Reduction:  30.0% [Passed]</span>
-<span class="text-emerald-400">Reasoning Continuity:     94.5% [Passed]</span>
-<span class="text-emerald-400">Safety Filtering Rate:    99.8% [Passed]</span>
-<span class="text-blue-400">====================================================</span>
-<span class="text-emerald-400">Status: SUCCESS</span>
+<span class="text-slate-300">[*] Intercepting via Sub-ms Reverse Proxy Gateway...</span>
+<span class="text-emerald-400">[+] OWASP Threat Scanner: 0 Injections | PII Redacted</span>
+<span class="text-emerald-400">[+] Cryptographic Memory Guard: Fernet + HMAC Verified</span>
+<span class="text-slate-300">[*] Running Non-Parametric Statistical Regression Engine...</span>
+<span class="text-blue-400">================ STATISTICAL AUDIT REPORT ================</span>
+<span class="text-emerald-400">Mann-Whitney U Test:     p = 0.428 (p > 0.05 Safe)</span>
+<span class="text-emerald-400">Bootstrap 95% CI:        [-0.012, +0.038] (No Regress)</span>
+<span class="text-emerald-400">OTel Traces & Spans:     100% Exported to Collector</span>
+<span class="text-blue-400">==========================================================</span>
+<span class="text-emerald-400">Status: PASS (Exit Code 0) - CI/CD Safe to Deploy</span>
 <span class="text-emerald-400">$</span> <span class="animate-pulse">_</span></code></pre>
             </div>
             
@@ -566,36 +566,38 @@ print(<span class="text-emerald-400">f"Found {len(results)} relevant EHR artifac
       <!-- Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projects-grid">
         
-        <!-- Project 5: Arbiter (Open-Source Evaluation) -->
+        <!-- Project 5: Arbiter (Enterprise AI Trust Platform & Gateway) -->
         <div class="project-card glass-panel rounded-xl p-6 sm:p-8 flex flex-col justify-between hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-glow-emerald duration-300 transition-all cursor-pointer shadow-glow-emerald" data-category="agentic mlops" onclick="openProjectDetails(5)">
           <div>
             <div class="flex justify-between items-start mb-4">
               <div class="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
-                <i data-lucide="gauge" class="w-6 h-6"></i>
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
               </div>
               <div class="flex items-center gap-1.5">
                 <span class="text-xs font-mono text-emerald-400 font-semibold bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded">Open-Source</span>
-                <span class="text-xs font-mono text-blue-400 font-semibold bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">LLMOps</span>
+                <span class="text-xs font-mono text-blue-400 font-semibold bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded">AI Trust & Gateway</span>
               </div>
             </div>
-            <h3 class="text-xl font-display font-bold text-white mb-2">Arbiter: Continuous LLM Evaluation Platform</h3>
+            <h3 class="text-xl font-display font-bold text-white mb-2">ARBITER: Enterprise AI Trust Platform & Gateway</h3>
             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Self-hosted evaluation engine to automate adversarial red-teaming (Pydantic AI) and statistical regression testing (Mann-Whitney U, Bootstrap CIs) in CI/CD.
+              Production-ready zero-trust AI reverse proxy gateway, real-time OWASP threat scanner, declarative YAML policy engine, cryptographic agent memory guard, and non-parametric statistical regression engine for CI/CD rollouts.
             </p>
           </div>
           <div>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-850 border border-slate-800 text-slate-300">FastAPI</span>
-              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-850 border border-slate-800 text-slate-300">Pydantic AI</span>
-              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-850 border border-slate-800 text-slate-300">Celery/Redis</span>
-              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-850 border border-slate-800 text-slate-300">SciPy/NumPy</span>
-              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-850 border border-slate-800 text-slate-300">Docker</span>
+              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">FastAPI</span>
+              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">React</span>
+              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">Celery/Redis</span>
+              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">PostgreSQL</span>
+              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">OpenTelemetry</span>
+              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">SciPy (Mann-Whitney U)</span>
+              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">Docker & K8s</span>
             </div>
             <div class="flex justify-between items-center text-xs font-semibold">
               <span class="text-emerald-400 flex items-center gap-1 hover:gap-2 transition-all">
                 Learn More <i data-lucide="chevron-right" class="w-4 h-4"></i>
               </span>
-              <a href="https://github.com/ParvGatecha/Arbiter" target="_blank" onclick="event.stopPropagation();" class="text-slate-405 hover:text-white flex items-center gap-1">
+              <a href="https://github.com/ParvGatecha/Arbiter" target="_blank" onclick="event.stopPropagation();" class="text-slate-400 hover:text-white flex items-center gap-1 transition-colors">
                 <i data-lucide="github" class="w-4 h-4"></i> GitHub
               </a>
             </div>
@@ -1222,8 +1224,8 @@ print(<span class="text-emerald-400">f"Found {len(results)} relevant EHR artifac
             <h3 class="text-sm font-bold text-slate-900 border-b border-slate-200 pb-1 mb-2 tracking-wide uppercase">Key Projects</h3>
             <div class="space-y-3">
               <div>
-                <strong>Arbiter — Open-Source Continuous LLM Evaluation Platform</strong> (FastAPI, Pydantic AI, Celery, Redis, SciPy)
-                <p class="text-slate-700 pl-4 mt-0.5">Built a self-hosted platform for CI/CD pipeline automation of adversarial testing, running automated red-teaming (Pydantic AI) and statistical regression detection (Mann-Whitney U tests, Bootstrap resampling).</p>
+                <strong>Arbiter — Enterprise AI Trust Platform, Reverse Proxy Gateway & Statistical Engine</strong> (FastAPI, React, Celery, Redis, PostgreSQL, OpenTelemetry, SciPy, Docker/K8s)
+                <p class="text-slate-700 pl-4 mt-0.5">Engineered a zero-trust AI reverse proxy gateway with real-time OWASP/MITRE threat scanning, dynamic YAML policy engine, cryptographic agent memory defense (Fernet AES-128 + HMAC-SHA256), and a non-parametric statistical regression engine (Mann-Whitney U & Bootstrap 95% CIs) integrated with a developer CLI for automated CI/CD build gating.</p>
               </div>
               <div>
                 <strong>Production-Grade Multi-Agent AI System</strong> (LangChain, LangGraph, Python, Docker)
@@ -1354,15 +1356,18 @@ print(<span class="text-emerald-400">f"Found {len(results)} relevant EHR artifac
         ]
       },
       5: {
-        title: "Arbiter: Open-Source Continuous LLM Evaluation Platform",
-        icon: "gauge",
-        tags: ["FastAPI", "Pydantic AI", "Celery", "Redis", "SciPy", "NumPy", "OpenTelemetry"],
+        title: "ARBITER: Enterprise AI Trust Platform, Reverse Proxy Gateway & Statistical Regression Engine",
+        icon: "shield-check",
+        tags: ["FastAPI", "Reverse Proxy Gateway", "React (Vite)", "Celery/Redis", "PostgreSQL (SQLModel)", "OpenTelemetry", "SciPy (Mann-Whitney U)", "Cryptography (AES-128/HMAC)", "Docker & Kubernetes", "Typer CLI"],
         bullets: [
-          "Developed a self-hosted evaluation platform to automate adversarial testing and detect prompt or model regressions directly inside CI/CD pipelines.",
-          "Implemented automated red-teaming using Pydantic AI to dynamically synthesize targeted adversarial variants (jailbreaks, prompt injections, edge cases) based on intent definitions.",
-          "Built a statistical regression engine using SciPy and NumPy, applying Mann-Whitney U significance testing (p < 0.05) and Bootstrap confidence interval estimation (B=1000 resampling iterations) on evaluation distributions.",
-          "Architected an async queue system (FastAPI, Celery, Redis) to manage large-scale batch evaluations, rate-limiting, and GPU resource constraints.",
-          "Integrated local-first GPU deployment configurations (SGLang, Ollama, docker-compose) and distributed observability instrumentation with OpenTelemetry (Jaeger) and Weights & Biases (W&B)."
+          "Zero-Trust Reverse Proxy Gateway: Intercepts chat/completions calls in real time as a sub-millisecond drop-in proxy for OpenAI, Anthropic, Gemini, Ollama, and vLLM by overriding base_url.",
+          "Real-Time Threat Scanner: Performs inline security scans for prompt injections, jailbreaks, PII leakage (SSN, Email, CC), and credential leaks mapped to MITRE ATT&CK and OWASP LLM Top 10.",
+          "Dynamic Declarative YAML Policies: Compiles project-level security policies to block, mask, flag, or restrict unauthorized agent tool executions (e.g. execute_sql, write_database) without requiring code redeployments.",
+          "Non-Parametric Statistical Regression Engine: Employs Mann-Whitney U rank-sum hypothesis testing (p < 0.05) and Bootstrap Resampling (1,000 resamples, 95% Confidence Intervals) to mathematically assert candidate vs. baseline LLM performance and eliminate noisy false positives.",
+          "Cryptographic Agent Memory Guard: Implements dual-layer defense with Fernet symmetric payload encryption (AES-128 via PBKDF2) and HMAC-SHA256 integrity signatures to protect autonomous agent state against memory poisoning and tampering attacks.",
+          "Distributed Task Pipeline & LLM-as-a-Judge: Utilizes Celery and Redis to asynchronously coordinate large batch evaluation suites, adversarial red-teaming generation, and multi-provider alignment judging with PostgreSQL audit persistence.",
+          "Developer CLI & CI/CD Quality Gating: Built a terminal client (arbiter_cli) using Typer and Rich with automatic Git commit SHA detection that exits with code 1 upon detected statistical regressions, enabling automated GitHub Actions CI/CD gating.",
+          "Observability & Infrastructure: Native OpenTelemetry (OTel) distributed tracing across gateway proxying and async evaluation tasks, with full production deployment configurations for Docker Compose and Kubernetes (EKS/GKE/AKS)."
         ]
       }
     };
