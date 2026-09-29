@@ -337,13 +337,15 @@ print(<span class="text-emerald-400">f"Found {len(results)} relevant EHR artifac
               <pre id="content-eval" class="space-y-1 hidden"><code class="text-slate-400"><span class="text-emerald-400">$</span> arbiter evaluate --project-id 1 --suite-id 2 --target-url /api/gateway/chat/completions
 
 <span class="text-slate-300">[*] Intercepting via Sub-ms Reverse Proxy Gateway...</span>
-<span class="text-emerald-400">[+] OWASP Threat Scanner: 0 Injections | PII Redacted</span>
-<span class="text-emerald-400">[+] Cryptographic Memory Guard: Fernet + HMAC Verified</span>
-<span class="text-slate-300">[*] Running Non-Parametric Statistical Regression Engine...</span>
+<span class="text-emerald-400">[+] Threat Scanner: 0 Jailbreaks / Injections | PII Masked</span>
+<span class="text-emerald-400">[+] Memory Defense: Fernet (AES-128) + HMAC-SHA256 Signed</span>
+<span class="text-slate-300">[*] Running Statistical Regression Engine & LLM Judge Rubrics...</span>
 <span class="text-blue-400">================ STATISTICAL AUDIT REPORT ================</span>
-<span class="text-emerald-400">Mann-Whitney U Test:     p = 0.428 (p > 0.05 Safe)</span>
-<span class="text-emerald-400">Bootstrap 95% CI:        [-0.012, +0.038] (No Regress)</span>
-<span class="text-emerald-400">OTel Traces & Spans:     100% Exported to Collector</span>
+<span class="text-emerald-400">Paired Wilcoxon Signed-Rank:  p = 0.382 (p > 0.05 Safe)</span>
+<span class="text-emerald-400">Cliff's Delta Effect Size:   δ = +0.08 [NEGLIGIBLE]</span>
+<span class="text-emerald-400">Bootstrap 95% CI:            [-0.010, +0.035] (No Regress)</span>
+<span class="text-emerald-400">Judge Rubrics (Pydantic):    Faithful: 0.98 | Safety: 1.0</span>
+<span class="text-emerald-400">OTel Traces & Spans:         100% Exported to Collector</span>
 <span class="text-blue-400">==========================================================</span>
 <span class="text-emerald-400">Status: PASS (Exit Code 0) - CI/CD Safe to Deploy</span>
 <span class="text-emerald-400">$</span> <span class="animate-pulse">_</span></code></pre>
@@ -580,7 +582,7 @@ print(<span class="text-emerald-400">f"Found {len(results)} relevant EHR artifac
             </div>
             <h3 class="text-xl font-display font-bold text-white mb-2">ARBITER: Enterprise AI Trust Platform & Gateway</h3>
             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Production-ready zero-trust AI reverse proxy gateway, real-time OWASP threat scanner, declarative YAML policy engine, cryptographic agent memory guard, and non-parametric statistical regression engine for CI/CD rollouts.
+              Zero-trust AI reverse proxy gateway with real-time OWASP threat scanning, dynamic YAML policy engine, cryptographic agent memory defense, multi-dimensional LLM judge rubrics, production flywheel, and non-parametric statistical regression testing (Paired Wilcoxon, Cliff's Delta, Bootstrap CIs) for CI/CD rollouts.
             </p>
           </div>
           <div>
@@ -590,7 +592,8 @@ print(<span class="text-emerald-400">f"Found {len(results)} relevant EHR artifac
               <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">Celery/Redis</span>
               <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">PostgreSQL</span>
               <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">OpenTelemetry</span>
-              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">SciPy (Mann-Whitney U)</span>
+              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">Paired Wilcoxon & Cliff's Delta</span>
+              <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">LLM Judge Rubrics</span>
               <span class="text-[11px] font-mono font-medium px-2.5 py-1 rounded-md bg-slate-900/60 border border-slate-800 text-slate-300">Docker & K8s</span>
             </div>
             <div class="flex justify-between items-center text-xs font-semibold">
@@ -1225,7 +1228,7 @@ print(<span class="text-emerald-400">f"Found {len(results)} relevant EHR artifac
             <div class="space-y-3">
               <div>
                 <strong>Arbiter — Enterprise AI Trust Platform, Reverse Proxy Gateway & Statistical Engine</strong> (FastAPI, React, Celery, Redis, PostgreSQL, OpenTelemetry, SciPy, Docker/K8s)
-                <p class="text-slate-700 pl-4 mt-0.5">Engineered a zero-trust AI reverse proxy gateway with real-time OWASP/MITRE threat scanning, dynamic YAML policy engine, cryptographic agent memory defense (Fernet AES-128 + HMAC-SHA256), and a non-parametric statistical regression engine (Mann-Whitney U & Bootstrap 95% CIs) integrated with a developer CLI for automated CI/CD build gating.</p>
+                <p class="text-slate-700 pl-4 mt-0.5">Engineered a zero-trust AI reverse proxy gateway with sub-ms OWASP/MITRE threat scanning, dynamic YAML policy engine, and cryptographic agent memory guard (Fernet AES-128 + HMAC-SHA256). Built a non-parametric statistical regression engine (Paired Wilcoxon Signed-Rank, Mann-Whitney U, Cliff's Delta effect sizes, Bootstrap 95% CIs), multi-dimensional LLM judge rubrics (Faithfulness, Safety, Instruction Following, Conciseness), and a production-to-benchmark flywheel with a developer CLI for automated CI/CD build gating.</p>
               </div>
               <div>
                 <strong>Production-Grade Multi-Agent AI System</strong> (LangChain, LangGraph, Python, Docker)
@@ -1358,16 +1361,18 @@ print(<span class="text-emerald-400">f"Found {len(results)} relevant EHR artifac
       5: {
         title: "ARBITER: Enterprise AI Trust Platform, Reverse Proxy Gateway & Statistical Regression Engine",
         icon: "shield-check",
-        tags: ["FastAPI", "Reverse Proxy Gateway", "React (Vite)", "Celery/Redis", "PostgreSQL (SQLModel)", "OpenTelemetry", "SciPy (Mann-Whitney U)", "Cryptography (AES-128/HMAC)", "Docker & Kubernetes", "Typer CLI"],
+        tags: ["FastAPI", "Reverse Proxy Gateway", "React (Vite)", "Celery/Redis", "PostgreSQL (SQLModel)", "OpenTelemetry", "Paired Wilcoxon & Cliff's Delta", "LLM Judge Rubrics", "Cryptography (AES-128/HMAC)", "Docker & Kubernetes", "Typer CLI"],
         bullets: [
-          "Zero-Trust Reverse Proxy Gateway: Intercepts chat/completions calls in real time as a sub-millisecond drop-in proxy for OpenAI, Anthropic, Gemini, Ollama, and vLLM by overriding base_url.",
+          "Zero-Trust Reverse Proxy Gateway: Intercepts chat/completions calls in real time as a sub-millisecond drop-in proxy for OpenAI, Anthropic, Gemini, Ollama, and vLLM simply by overriding base_url.",
           "Real-Time Threat Scanner: Performs inline security scans for prompt injections, jailbreaks, PII leakage (SSN, Email, CC), and credential leaks mapped to MITRE ATT&CK and OWASP LLM Top 10.",
           "Dynamic Declarative YAML Policies: Compiles project-level security policies to block, mask, flag, or restrict unauthorized agent tool executions (e.g. execute_sql, write_database) without requiring code redeployments.",
-          "Non-Parametric Statistical Regression Engine: Employs Mann-Whitney U rank-sum hypothesis testing (p < 0.05) and Bootstrap Resampling (1,000 resamples, 95% Confidence Intervals) to mathematically assert candidate vs. baseline LLM performance and eliminate noisy false positives.",
+          "Non-Parametric Statistical Regression Engine: Implements Paired Wilcoxon Signed-Rank tests (eliminating case-difficulty variance across benchmarks), Mann-Whitney U fallback, Cliff’s Delta (δ) effect size categorization (Negligible, Small, Medium, Large), and Bootstrap Resampling (1,000 resamples, 95% CIs) to mathematically eliminate noisy false positives in CI/CD pipelines.",
+          "Multi-Dimensional Rubric LLM-as-a-Judge: Decomposes model evaluation across 4 granular rubric dimensions (Faithfulness, Safety, Instruction Following, Conciseness) via structured Pydantic schema with distributed OpenTelemetry telemetry.",
+          "Production-to-Benchmark Flywheel: Provides a one-click promotion API (/api/gateway/logs/:id/promote-to-testcase) that transforms real-world production security incidents and edge-case failures into permanent regression test cases.",
           "Cryptographic Agent Memory Guard: Implements dual-layer defense with Fernet symmetric payload encryption (AES-128 via PBKDF2) and HMAC-SHA256 integrity signatures to protect autonomous agent state against memory poisoning and tampering attacks.",
-          "Distributed Task Pipeline & LLM-as-a-Judge: Utilizes Celery and Redis to asynchronously coordinate large batch evaluation suites, adversarial red-teaming generation, and multi-provider alignment judging with PostgreSQL audit persistence.",
+          "Distributed Task Pipeline & Async Red-Teaming: Coordinates batch evaluation suites and automated adversarial red-teaming prompt synthesis (across 5 attack vectors via Pydantic AI) using Celery and Redis with asyncio.Semaphore rate-limiting and PostgreSQL persistence.",
           "Developer CLI & CI/CD Quality Gating: Built a terminal client (arbiter_cli) using Typer and Rich with automatic Git commit SHA detection that exits with code 1 upon detected statistical regressions, enabling automated GitHub Actions CI/CD gating.",
-          "Observability & Infrastructure: Native OpenTelemetry (OTel) distributed tracing across gateway proxying and async evaluation tasks, with full production deployment configurations for Docker Compose and Kubernetes (EKS/GKE/AKS)."
+          "Observability & Cloud-Native Infrastructure: Native OpenTelemetry (OTel) distributed tracing across proxy hops and async evaluation tasks, with full production deployment configurations for Docker Compose and Kubernetes (EKS/GKE/AKS)."
         ]
       }
     };
